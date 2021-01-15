@@ -40,7 +40,7 @@ stage('Build Managment') {
 	 "files": [
 	{
 	"pattern": "**/*.war",
-	"target": "devops_301"
+	"target": "devops_301_"
         }
 	]
 	}"""
