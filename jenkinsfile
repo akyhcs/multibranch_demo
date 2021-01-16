@@ -48,8 +48,8 @@ stage('Build Managment') {
  }
 
 
-stage('Archive Artifacts') {
-archive 'target/*.war'    
-}
+//stage('Archive Artifacts') {
+//archive 'target/*.war'    
+//}
 }
 }
