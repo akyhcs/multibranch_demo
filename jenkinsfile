@@ -19,7 +19,7 @@ stage('Build Managment') {
       def downloadSpec = """{
      "files": [
     {
-    "pattern": "devops_301/*.war",
+    "pattern": "devops_301_/*.war",
     "target": "files/"
         }
     ]
