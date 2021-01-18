@@ -22,7 +22,7 @@ stage('Build Managment') {
 	 "files": [
 	{
 	"pattern": "devops_301_/petclinic.war",
-	"target": "roles/petclinic/files/"
+	"target": "tomcat/files/"
         }
 	]
 	}"""
