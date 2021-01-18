@@ -72,7 +72,7 @@ resource "null_resource" "ansible-main" {
         echo "[jenkins-ci]"| tee -a jenkins-ci.ini;
         export ANSIBLE_HOST_KEY_CHECKING=False;
         echo "${aws_instance.dev-app.public_ip}" | tee -a jenkins-ci.ini;
-        ansible-playbook  --key-file=${var.pvt_key} -i jenkins-ci.ini -u ubuntu ./ansible-code/petclinic.yaml  -v
+        ansible-playbook  --key-file=${var.pvt_key} -i jenkins-ci.ini -u ubuntu tomcat_playbook.yaml  -v
       EOT
   }
   depends_on = [aws_instance.dev-app]
