@@ -73,7 +73,7 @@ resource "null_resource" "ansible-main" {
         export ANSIBLE_HOST_KEY_CHECKING=False;
         echo "${aws_instance.dev-app.public_ip}" | tee -a jenkins-ci.ini;
         echo "hey i will printined only if this block is going to execute ha ha!!!!"
-        ansible-playbook  --key-file=${var.pvt_key} -i jenkins-ci.ini -u ubuntu tomcat_playbook.yaml  -v
+        ansible-playbook  --key-file=${var.pvt_key} -i jenkins-ci.ini -u ubuntu ./tomcat_playbook.yaml  -v
       EOT
   }
   depends_on = [aws_instance.dev-app]
